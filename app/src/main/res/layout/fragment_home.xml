@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/home_toolbar_menu"
+            app:title="@string/app_name"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/BoldToolbarTitle" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_create_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="3dp">
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/create_room_desc"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_create_video"
+                app:tint="@color/content_grey" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_create_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@string/create_room"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_join_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="3dp">
+
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/join_room_desc"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_join_video"
+                app:tint="@color/content_grey" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_join_room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@string/join_room"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+</LinearLayout>
