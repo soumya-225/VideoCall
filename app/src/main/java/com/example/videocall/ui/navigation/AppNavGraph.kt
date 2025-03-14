@@ -4,8 +4,8 @@ import androidx.navigation.NavController
 import androidx.navigation.createGraph
 import androidx.navigation.fragment.fragment
 import com.example.videocall.ui.home.HomeFragment
-import com.example.videocall.ui.home.LoginFragment
-import com.example.videocall.ui.home.SignUpFragment
+import com.example.videocall.ui.auth.LoginFragment
+import com.example.videocall.ui.auth.SignUpFragment
 
 fun NavController.setupNavGraph() {
     graph = createGraph(startDestination = Destination.Home.route) {

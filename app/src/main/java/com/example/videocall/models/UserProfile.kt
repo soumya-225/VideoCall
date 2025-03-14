@@ -1,4 +1,4 @@
-package com.example.videocall.data
+package com.example.videocall.models
 
 data class UserProfile(
     val name: String,
