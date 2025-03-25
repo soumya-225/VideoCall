@@ -1,5 +1,7 @@
 package com.example.videocall.network
 
+import com.example.videocall.models.CreateRoomRequest
+import com.example.videocall.models.CreateRoomResponse
 import com.example.videocall.models.LoginRequest
 import com.example.videocall.models.RegisterRequest
 import com.example.videocall.models.TokenResponse
@@ -13,4 +15,7 @@ interface ApiService {
 
     @POST("auth/register")
     suspend fun register(@Body request: RegisterRequest): Response<TokenResponse>
+
+    @POST("room/createRoom")
+    suspend fun createRoom(@Body request: CreateRoomRequest): Response<CreateRoomResponse>
 }

@@ -26,83 +26,120 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_create_room"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:elevation="0dp"
-            android:focusable="true"
-            app:cardCornerRadius="16dp"
-            app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="3dp">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                android:contentDescription="@string/create_room_desc"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_create_video"
-                app:tint="@color/content_grey" />
-        </com.google.android.material.card.MaterialCardView>
-
-        <TextView
-            android:id="@+id/tv_create_room"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:text="@string/create_room"
-            android:textAlignment="center"
-            android:textSize="20sp" />
-    </LinearLayout>
+        android:layout_margin="16dp"
+        android:text="@string/welcome_user"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:layout_marginTop="8dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_join_room"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:elevation="0dp"
-            android:focusable="true"
-            app:cardCornerRadius="16dp"
-            app:strokeColor="?attr/colorPrimary"
-            app:strokeWidth="3dp">
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                android:contentDescription="@string/join_room_desc"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_join_video"
-                app:tint="@color/content_grey" />
-        </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_create_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:elevation="0dp"
+                android:focusable="true"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="3dp">
 
-        <TextView
-            android:id="@+id/tv_join_room"
-            android:layout_width="match_parent"
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/create_room_desc"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_create_video"
+                    app:tint="@color/content_grey" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_create_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/create_room"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:text="@string/join_room"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_join_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:elevation="0dp"
+                android:focusable="true"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="3dp">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/join_room_desc"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_join_video"
+                    app:tint="@color/content_grey" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tv_join_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/join_room"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+        </LinearLayout>
     </LinearLayout>
 
+    <com.google.android.material.button.MaterialButton
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:text="@string/manage_rooms"
+        android:textSize="16sp" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:labelFor="@+id/rv_recent"
+        android:text="@string/recent_meetings"
+        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_recent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 </LinearLayout>
